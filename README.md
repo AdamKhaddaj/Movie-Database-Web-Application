@@ -1,10 +1,10 @@
-#The largest heading
-A movie database web application. 
+<font size="1"> A movie database web application. </font>
 
 The server code is built with Node.js, and the database is handled using MongoDB and mongoose. 
 
-RESTful design was used in how the server handles all routing.
-#The largest heading
+<font size="1"> RESTful design was used in how the server handles all routing. </font>
+
+
 Running instructions:
 
   - Set up the database:
