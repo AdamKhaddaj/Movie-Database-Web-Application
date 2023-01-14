@@ -1,0 +1,36 @@
+html 
+    header
+        include ../partials/header.pug
+        link(rel="stylesheet" href="/style.css")
+    body
+        style.
+            p{
+                font-size: 20px;
+            }
+        div(style="margin-left: 15px;")
+            p Movie Keywords:
+            input#movieBar(class="searchbar" style="width: 40%;" type="text" placeholder=" Search...")
+            
+            p Actor Keywords:
+            input#actorBar(class="searchbar" style="width: 40%;" type="text" placeholder=" Search...")
+
+            p Writer Keywords:
+            input#directorBar(class="searchbar" style="width: 40%;" type="text" placeholder=" Search...")
+
+            p Director Keywords:
+            input#writerBar(class="searchbar" style="width: 40%;" type="text" placeholder=" Search...")
+
+            p Genre:
+            input#genreBar(class="searchbar" style="width: 40%;" type="text" placeholder=" Search...")
+            br
+            br
+
+            button#search(class = "button" style = "background-color: #61afef;") Search 
+            br
+            br
+            br
+            br
+    footer
+        include ../partials/footer.pug  
+    script
+        include ../../public/scripts/advancedsearch.js

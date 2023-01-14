@@ -1,0 +1,24 @@
+html 
+  header
+    include ../partials/header.pug
+    link(rel="stylesheet" href="/style.css")
+  body
+    p(class="title")  #{user.Username}'s 
+      span(class="title" style="color: #abb2bf;")  Profile:
+    button(class="button" style="background-color: #e06c75;") Follow
+    p(class="subtitle") Watched Movies:
+    div(class="scroll-list")
+      -for(let i = 0 ; i < user.Watchlist.length ; i++)
+        a(onclick="window.location.href='/movies/"+user.Watchlist[i]._id href = "/movies/"+user.Watchlist[i]._id)
+          image(type="image" src=user.Watchlist[i].Poster style="height: 200px")
+          p #{user.Watchlist[i].Title} (#{user.Watchlist[i].Released})
+    br
+    p(class="subtitle")  Followed Actors/Writers/Directors:
+    div(class="scroll-list")
+      -for(let i = 0 ; i < user.FollowedPeople.length ; i++)
+        a(href = '/people/'+user.FollowedPeople[i]._id)
+          p(style="font-size: 18px;") #{user.FollowedPeople[i].Name}
+    br
+    
+    script 
+      include ../../public/scripts/profile.js

@@ -1,0 +1,204 @@
+body{
+    background-color: #24272e;
+    margin:0;
+    font-family: Tahoma, Helvetica;
+    color: #abb2bf;
+}
+p{
+    font-size: 15px;
+}
+.title{
+    font-size: 30px;
+    color: #e06c75;
+}
+.subtitle{
+    font-size: 25px;
+}
+.scroll-list{
+    background-color: #1c1e24;
+    overflow: auto;
+    white-space: nowrap;
+}
+.scroll-list a{
+    display: inline-block;
+    color: #abb2bf;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    border-right: 0.5px solid #24272e;
+    border-bottom: 0.5px solid #24272e;
+}
+.scroll-list a:hover{
+    background-color: #24272e;
+}
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-track{
+    background: #24272e;  
+}
+::-webkit-scrollbar-thumb {
+    background: #1c1e24; 
+    border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #282c34 
+}
+.searchbar{
+    color: #282c34;
+    outline:none;
+    font-family: Tahoma, Helvetica;
+    font-size: 18px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+}
+
+.searchbar-left-button{
+    color: #282c34;
+    outline:none;
+    font-family: Tahoma, Helvetica;
+    font-size: 18px;
+    height: 40px;
+    border: none;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.searchbar-right-button{
+    color: #282c34;
+    outline:none;
+    font-family: Tahoma, Helvetica;
+    font-size: 18px;
+    height: 40px;
+    border: none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.button{
+    border-radius: 8px;
+    font-family: Tahoma, Helvetica;
+    border: none;
+    height: 40px;
+    width: 90px;
+    margin-right: 15px;
+    color: #282c34;
+    font-size: 18px;
+    outline: none;
+}
+button:hover{
+    opacity: 0.8;
+}
+.right-button{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-family: Tahoma, Helvetica;
+    border: none;
+    height: 40px;
+    width: 90px;
+    margin-right: 15px;
+    color: #282c34;
+    font-size: 18px;
+    outline: none;
+}
+.left-button{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    font-family: Tahoma, Helvetica;
+    border: none;
+    height: 40px;
+    width: 90px;
+    margin-right: 15px;
+    color: #282c34;
+    font-size: 18px;
+    outline: none;
+}
+.vertical-scroll-list{
+    background-color: #1c1e24;
+    overflow: auto;
+    white-space: nowrap;
+    height: 600px;
+}
+.vertical-scroll-list a{
+    display: block;
+    color: #abb2bf;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    border-bottom: 0.5px solid #24272e;
+    border-right: 0.5px solid #24272e
+}
+.vertical-scroll-list a:hover{
+    background-color: #24272e;
+}
+.vertical-scroll-list::-webkit-scrollbar{
+    overflow-x: hidden;
+}
+.topnav{
+    background-color: #282c34;
+    float: center;
+    width: 100%;
+    height: 70px;
+    font-family: Tahoma, Helvetica;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    height: 70px;
+    width: 95px;
+    margin-right: 15px;
+    outline: none;
+}
+.search{
+    outline: none;
+    background-color: #61afef;
+    color: #282c34;
+    height: 40px;
+    width: 26px;
+    border: none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.footer{
+    background-color: #282c34;
+    width: 100%;
+    height: 40px;
+    font-family: Tahoma, Helvetica;
+    color: #abb2bf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+}
+.button-list{
+    background-color: #1c1e24;
+    overflow: auto;
+    white-space: nowrap;
+}
+.button-list div{
+    display: inline-block;
+    color: #abb2bf;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    border-right: 0.5px solid #24272e;
+    border-bottom: 0.5px solid #24272e;
+}
+.button-list a:hover{
+    background-color: #24272e;
+}
+.button-list a{
+    color:#abb2bf;
+    text-decoration: none;
+}
+.button-list button{
+    display: inline-block;
+    color: #24272e;
+    text-align: center;
+    padding: 0;
+    border-right: 0.5px solid #24272e;
+}
+.button-list button:hover{
+    background-color: #24272e;
+}

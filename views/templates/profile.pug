@@ -1,0 +1,52 @@
+html
+    header
+        include ../partials/header.pug
+        link(rel="stylesheet" href="/style.css")
+    body
+        p(class="title" style="color: #e06c75; text-align: center;") Your Profile:
+        p(style="font-size: 20px; margin: 0;") Username: #{user.Username}
+        p(style="font-size: 25px;") People You Follow: 
+        div(class="button-list")
+            -for(let i = 0 ; i < user.FollowedPeople.length ; i++)
+                div
+                    a(href = '/people/'+user.FollowedPeople[i]._id)
+                        p(style="font-size: 18px;") #{user.FollowedPeople[i].Name}
+                    button(class="button" id=user.FollowedPeople[i]._id style="background-color: #e06c75;" onclick="removePerson(this)") Unfollow
+        p(style="font-size: 25px;") Users You Follow: 
+        div(class="button-list")
+            -for(let i = 0 ; i < user.FollowedUsers.length ; i++)
+                div
+                    a(href = '/users')
+                        p(style="font-size: 18px;") #{user.FollowedUsers[i].Username}
+                    button(class="button" style="background-color: #e06c75;" onclick = "window.location.reload()") Unfollow
+        p(class="subtitle") Watch List:
+        div(class="button-list")
+            -for(let i = 0 ; i < user.Watchlist.length ; i++)
+                div
+                    a(onclick="window.location.href=/movies/"+user.Watchlist[i]._id href = "/movies/"+user.Watchlist[i]._id)
+                        image(type="image" src=user.Watchlist[i].Poster style="height: 200px")
+                        p #{user.Watchlist[i].Title} (#{user.Watchlist[i].Released})
+                    button(class="button" id=id=user.Watchlist[i]._id style="background-color: #e06c75;" onclick = "removeMovie(this)"+user.Watchlist[i]._id) Remove
+        p(class="subtitle") Recommended Movies:
+        div(class="scroll-list")
+            -for(let i = 0 ; i < user.Watchlist.length ; i++)
+                a(onclick="window.location.href='/movies;" href = "/movies")
+                    image(type="image" src=user.Watchlist[i].Poster style="height: 200px")
+                    p #{user.Watchlist[i].Title} (#{user.Watchlist[i].Released})                
+        br
+        br
+        p(class="subtitle") Contributing:
+            -if(contributing)
+                button#contributingOff(class="button") Turn off 
+            -else
+                button#contributingOn(class="button") Turn on
+        button(class="button" style="background-color: #98c379; height:23px; width:260px;" onclick="window.location.href='/movies/addmovies'") Add Movie To Movie Magic
+        br
+        br
+        button(class="button" style="background-color: #98c379; height:23px; width:260px" onclick="window.location.href='/people/addpeople'") Add Person To Movie Magic
+    footer
+        include ../partials/footer.pug
+    script 
+        include ../../public/scripts/profile.js
+
+    

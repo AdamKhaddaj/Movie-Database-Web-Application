@@ -1,0 +1,86 @@
+html 
+  head 
+    include ../partials/header.pug
+    link(rel="stylesheet" href="/style.css")
+  body
+    style.
+      p{
+        margin: 2px;
+      }
+      a{
+        text-decoration: none;
+        color: #abb2bf;
+      }
+      a:visited{
+        color: #abb2bf;
+      }
+
+    div(style="margin: auto; width: 740px;")
+      p(style="text-align: center; font-size: 25px; color: #e06c75") #{movie.Title} 
+        button#addmovie(class="button" style="background-color: #abb2bf; height:23px; width:23px") +  
+      p #{movie.Released} | #{movie.Runtime} | 5/10 | 
+        -for(let i = 0; i < movie.Genre.length; i++)
+          -if(i == movie.Genre.length-1)
+            a(href='/results') #{movie.Genre[i]}
+          -else
+            a(href='/results') #{movie.Genre[i]}, 
+    div(style="margin: auto; display: flex; justify-content: center; width: 740px;")
+      image(style="height: 440px; width: 300px;" src=movie.Poster)
+      iframe(style="width: 440px; height: 440px; border: none" src="https://www.youtube.com/embed/HYUd7AOw_lk&ab_channel=SonyPicturesHomeEntertainment" allow="encrypted-media" allowfullscreen)
+    div(style="margin: auto; width: 740px;")
+      p #{movie.Plot}
+      br
+      p Director: 
+        -for(let i = 0; i < movie.Directors.length; i++)
+          -if(i == movie.Directors.length-1)
+            a(href='/people/'+movie.Directors[i]._id) #{movie.Directors[i].Name}
+          -else
+            a(href='/people/'+movie.Directors[i]._id) #{movie.Directors[i].Name},
+      p Writer: 
+        -for(let i = 0; i < movie.Writers.length; i++)
+          -if(i == movie.Writers.length-1)
+            a(href='/people/'+movie.Writers[i]._id) #{movie.Writers[i].Name}
+          -else
+            a(href='/people/'+movie.Writers[i]._id) #{movie.Writers[i].Name}, 
+      p Starring: 
+        -for(let i = 0; i < movie.Actors.length; i++)
+          -if(i == movie.Actors.length-1)
+            a(href='/people/'+movie.Actors[i]._id) #{movie.Actors[i].Name}
+          -else
+            a(href='/people/'+movie.Actors[i]._id) #{movie.Actors[i].Name}, 
+      
+      br
+      br
+      p(style="font-size: 25px; text-weight: strong") Similar Movies:
+      div(class="scroll-list")
+        -for(let i = 0 ; i < similarmovies.length ; i++)
+          a(onclick="window.location.href='/movies/"+similarmovies[i]._id href = "/movies/"+similarmovies[i]._id)
+            image(type="image" src=similarmovies[i].Poster style="height: 200px")
+            p #{similarmovies[i].Title} (#{similarmovies[i].Released})
+      
+      p(style="font-size: 30px;") Add a Review: 
+      input(class="searchbar" type="text" placeholder=" Title" style="height:23px")
+      span 
+        select(style="height:20px;width:45px; border-radius:8px;")
+          option 1
+          option 2
+          option 3
+          option 4
+          option 5
+          option 6
+          option 7
+          option 8
+          option 9
+          option 10
+      br
+      input(class="searchbar" type="text" placeholder="Review..." style="height: 80px; weight: 200px;")
+      br
+      br
+      button(class="button" style="background-color: #98c379;") Add
+      br
+      br
+          
+    footer
+        include ../partials/footer.pug
+    script 
+      include ../../public/scripts/addmovie.js

@@ -1,0 +1,58 @@
+html 
+    head 
+        include ../partials/header.pug  
+        link(rel="stylesheet" href="/style.css")
+    body
+        style.
+            p{
+                font-size: 20px;
+                color: #abb2bf;
+            }
+        div(style="margin-left: 15px;")
+            p(style="margin-bottom:5;") Add a movie to Movie Magic:
+            input(class="searchbar" type="text" placeholder=" Title...")
+            br
+            p(style="margin-bottom:5;") Date: 
+            input(type="date" style="border-radius:8px; border: none; height:20px; width:150px;")
+            br
+            p(style="margin-bottom:5;") Movie Rating (We've got kids on this site)
+            select(style="height:20px; width:45px; border-radius:8px; border: none;")
+                option(value="EC") EC
+                option(value="E") E
+                option(value="E10+") E10+
+                option(value="PG") PG
+                option(value="T") T
+                option(value="M") M
+                option(value="AO") AO
+            br
+            p(style="margin-bottom:5;") Runtime (in minutes):
+            input(type = "number", min = "0", max = "500" style="border-radius:8px; border: none; height:20px; width:45px;")
+            br
+            p(style="margin-bottom:5;") Genre(s)
+            input(class="searchbar-right-button" type="text" placeholder=" Action, Romance..." style="height: 23px;")
+            button(class="right-button" style="background-color: #98c379; height:23px") Add
+            br
+            p(style="margin-bottom:5;") Actor(s)
+            input(class="searchbar-right-button" type="text" placeholder=" Robin Williams..." style="height: 23px")
+            button(class="right-button" style="background-color: #98c379; height:23px") Add
+            br
+            p(style="margin-bottom:5;") Writer(s)
+            input(class="searchbar-right-button" type="text" placeholder=" Conrad Vernon..." style="height: 23px")
+            button(class="right-button" style="background-color: #98c379; height:23px") Add
+            br
+            p(style="margin-bottom:5;") Director(s)
+            input(class="searchbar-right-button" type="text" placeholder=" Quinton Tarantino..." style="height: 23px")
+            button(class="right-button" style="background-color: #98c379; height:23px") Add
+            br
+            p(style="margin-bottom:5;") Plot (make it juicy!)
+            input(class="searchbar" type="text" placeholder=" Once upon a time..." style="height: 100px; width:390px;")
+            br
+            p(style="margin-bottom:5;") Awards 
+            input(class="searchbar-right-button" type="text" placeholder=" Oscar..." style="height: 23px")
+            button(class="right-button" style="background-color: #98c379; height:23px") Add
+            br
+            br
+            br
+            button(class="button" style="background-color: #e06c75; height:46px; width:150px") Add Movie 
+    footer
+        include ../partials/footer.pug

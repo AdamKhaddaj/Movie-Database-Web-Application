@@ -1,0 +1,21 @@
+html(style="height: 100%;")
+    head 
+        include ../partials/header.pug
+        link(rel="stylesheet" href="/style.css") 
+    style.
+        p{
+            font-size: 20px;
+        }
+    body(style="text-align: center;")
+        p Sign Up:
+        input#username(class="searchbar" type="text" placeholder=" Username")
+        br
+        br
+        input#password(class="searchbar" type="text" placeholder=" Password")
+        br
+        br
+        button#register(class="button" style="background-color: #e06c75;") Sign up
+    footer(style="position: fixed; bottom: 0; width: 100%;")
+        include ../partials/footer.pug
+    script
+        include ../../public/scripts/signup.js

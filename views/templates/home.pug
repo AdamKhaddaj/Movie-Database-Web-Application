@@ -1,0 +1,56 @@
+html
+  header 
+    include ../partials/header.pug
+    link(rel="stylesheet" href="/style.css")
+  body
+    div(style="margin: auto; display: flex; justify-content: center;")
+      div(style="width: 550px; height: 600px; background-color: #1c1e24; border-right: 4px solid #24272e;")
+        a(onclick="window.location.href='/movies/"+featured[0]._id href = "/movies/"+featured[0]._id)
+          input(type="image" src=featured[0].Poster onclick="window.location.href='/movies/"+featured[0]._id href="/movies/"+featured[0]._id style="outline: none; width: 370px; height: 550px; margin: auto; display: block;")
+        p(style="font-size: 25px; color: #e06c75; margin: 6px; text-align: center;") Movie Of The Week: 
+          span(style="font-size: 25px; color: #abb2bf; margin: 4px;") #{featured[0].Title}
+      div(class="vertical-scroll-list")
+        p(style="font-size: 25px; margin: 0; text-align: center; border-right: 0.5px solid #24272e") Featured:
+        -for(let i = 0 ; i < featured.length ; i++)
+          a(onclick="window.location.href='/movies/"+featured[i]._id href = "/movies/"+featured[i]._id)
+            image(type="image" src=featured[i].Poster style="height: 200px")
+            p #{featured[i].Title} (#{featured[i].Released}) 
+    p(class="title") Explore:
+    p(class="subtitle") Action:
+    div(class="scroll-list")
+      -for(let i = 0 ; i < featured.length ; i++)
+        a(onclick="window.location.href='/movies/"+featured[i]._id href = "/movies/"+featured[i]._id)
+          image(type="image" src=featured[i].Poster style="height: 200px")
+          p #{featured[i].Title} (#{featured[i].Released})
+    p(class="subtitle") Comedy:
+    div(class="scroll-list")
+      -for(let i = 0 ; i < featured.length ; i++)
+        a(onclick="window.location.href='/movies/"+featured[i]._id href = "/movies/"+featured[i]._id)
+          image(type="image" src=featured[i].Poster style="height: 200px")
+          p #{featured[i].Title} (#{featured[i].Released})
+    p(class="subtitle") Romance:
+    div(class="scroll-list")
+      -for(let i = 0 ; i < featured.length ; i++)
+        a(onclick="window.location.href='/movies/"+featured[i]._id href = "/movies/"+featured[i]._id)
+          image(type="image" src=featured[i].Poster style="height: 200px")
+          p #{featured[i].Title} (#{featured[i].Released})
+    p(class="subtitle") Drama:
+    div(class="scroll-list")
+      -for(let i = 0 ; i < featured.length ; i++)
+        a(onclick="window.location.href='/movies/"+featured[i]._id href = "/movies/"+featured[i]._id)
+          image(type="image" src=featured[i].Poster style="height: 200px")
+          p #{featured[i].Title} (#{featured[i].Released})
+    p(class="subtitle") Anime:
+    div(class="scroll-list")
+      -for(let i = 0 ; i < featured.length ; i++)
+        a(onclick="window.location.href='/movies/"+featured[i]._id href = "/movies/"+featured[i]._id)
+          image(type="image" src=featured[i].Poster style="height: 200px")
+          p #{featured[i].Title} (#{featured[i].Released})
+    p(class="subtitle") Documentaries:
+    div(class="scroll-list")
+      -for(let i = 0 ; i < featured.length ; i++)
+        a(onclick="window.location.href='/movies/"+featured[i]._id href = "/movies/"+featured[i]._id)
+          image(type="image" src=featured[i].Poster style="height: 200px")
+          p #{featured[i].Title} (#{featured[i].Released})
+  footer
+    include ../partials/footer.pug

@@ -1,0 +1,21 @@
+html 
+    head 
+        include ../partials/header.pug
+        link(rel="stylesheet" href="/style.css")
+    body
+        div(style="margin-left: 15px;")
+            p(style="margin-bottom:5; font-size: 20px") Add a Person to Movie Magic:
+            input(class="searchbar" type="text" placeholder="Name...")
+            br
+            p(style="margin-bottom:5; font-size: 20px") Check Which Apply: 
+            input(type="checkbox")
+            span Actor
+            input(type="checkbox") 
+            span Writer
+            input(type="checkbox") 
+            span Director 
+            br
+            br
+            button(class="button" style="background-color: #e06c75; height:40px; width:130px") Add Person
+    footer(style="position: fixed; bottom: 0; width: 100%;")
+        include ../partials/footer.pug

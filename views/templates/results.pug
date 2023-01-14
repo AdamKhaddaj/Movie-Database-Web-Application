@@ -1,0 +1,45 @@
+html
+    head
+        include ../partials/header.pug
+        link(rel="stylesheet" href="/style.css")
+    body
+        p(class="title") Search Results:
+        p(class="subtitle") Movies:
+            div(class="scroll-list")
+                -if(paginationNum>0)
+                    a(onclick="window.location.href='/movies'"+prevquery href = "/movies"+prevquery)
+                        p Previous Page
+                -for(let i = 0 ; i < results.length ; i++)
+                    a(onclick="window.location.href='/movies/'"+results[i]._id href = "/movies/"+results[i]._id)
+                        image(type="image" src=results[i].Poster style="height: 200px")
+                        p #{results[i].Title} (#{results[i].Released})
+                -if(paginationNum!=-1)
+                    a(onclick="window.location.href='/movies'"+nextquery href = "/movies"+nextquery)
+                        p Next Page
+        p(class="subtitle") Actors:
+            div(class="scroll-list")
+                a(href = '/people')
+                    p(style="font-size: 18px;") temp
+                    div(class="container")
+                    p Worked on:
+                    p temp
+        p(class="subtitle") Directors:
+            div(class="scroll-list")
+                a(href = onclick="window.location.href")
+                    p(style="font-size: 18px;") temp
+                    div(class="container")
+                    p Worked on:
+                    p temp
+        p(class="subtitle") Writers:
+            div(class="scroll-list")
+                a(href = '/people')
+                    p(style="font-size: 18px;") temp
+                    div(class="container")
+                    p Worked on:
+                    p temp
+        p(class="subtitle") Users:
+            div(class="scroll-list")
+                a(href = '/users/tempload')
+                    p(style="font-size: 18px;") user
+    footer
+        include ../partials/footer.pug

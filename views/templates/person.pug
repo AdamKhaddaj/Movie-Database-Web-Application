@@ -1,0 +1,41 @@
+html 
+  head 
+    include ../partials/header.pug
+    link(rel="stylesheet" href="/style.css")
+  body
+    p(class="title" style="text-align: center; color: #e06c75; margin: 0;") #{person.Name} 
+      button#addperson(class="button" style="background-color: #abb2bf; height:23px; width:23px;") +  
+    p(class="subtitle" style="color: #e06c75;") Works:
+    -if(!person.ActedWorkHistory.length==0)
+      p(class="subtitle" ) Actor:
+      div(class="scroll-list")
+        -for(let i = 0 ; i < person.ActedWorkHistory.length ; i++)
+          a(onclick="window.location.href='/movies/'"+person.ActedWorkHistory[i]._id href = "/movies/"+person.ActedWorkHistory[i]._id)
+            image(type="image" src=person.ActedWorkHistory[i].Poster style="height: 200px")
+            p #{person.ActedWorkHistory[i].Title} (#{person.ActedWorkHistory[i].Released})
+    -if(!person.WrittenWorkHistory.length==0)
+      p(class="subtitle" ) Writer:
+      div(class="scroll-list")
+        -for(let i = 0 ; i < person.WrittenWorkHistory.length ; i++)
+          a(onclick="window.location.href='/movies/'"+person.WrittenWorkHistory[i]._id href = "/movies/"+person.WrittenWorkHistory[i]._id)
+            image(type="image" src=person.WrittenWorkHistory[i].Poster style="height: 200px")
+            p #{person.WrittenWorkHistory[i].Title} (#{person.WrittenWorkHistory[i].Released})
+    -if(!person.DirectedWorkHistory.length==0)
+      p(class="subtitle" ) Director:
+      div(class="scroll-list")
+        -for(let i = 0 ; i < person.DirectedWorkHistory.length ; i++)
+          a(onclick="window.location.href='/movies/'"+person.DirectedWorkHistory[i]._id href = "/movies/"+person.DirectedWorkHistory[i]._id)
+            image(type="image" src=person.DirectedWorkHistory[i].Poster style="height: 200px")
+            p #{person.DirectedWorkHistory[i].Title} (#{person.DirectedWorkHistory[i].Released})
+    
+    p(class="title" style="color: #e06c75;") #{person.Name} 
+      span(class="title" style="color: #abb2bf") has frequently worked with:
+    div(class="scroll-list")
+      -for(let i = 0 ; i < topcollaberators.length ; i++)
+        a(href = '/people/'+topcollaberatorids[i])
+          p(style="font-size: 18px;") #{topcollaberators[i]}
+  footer
+    include ../partials/footer.pug
+  
+  script 
+      include ../../public/scripts/addperson.js

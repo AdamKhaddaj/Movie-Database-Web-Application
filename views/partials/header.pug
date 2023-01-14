@@ -1,0 +1,31 @@
+html
+  title Movie Magic
+  link(rel="shortcut icon" type="image/png" href="../../images/transparentlogo.png")
+  link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet")
+  link(rel="stylesheet" href="/style.css")
+  style.
+    a:visited{
+      color: #efcb69;
+    }
+    a:hover{
+      opacity: 0.8;
+    }
+
+  div(class="topnav")
+    input(class="logo" type="image" src="../../images/transparentlogo.png" onclick="window.location.href='/';")
+    div(class="search")
+      button#basicsearch(class="search fa fa-search")
+      a(style="color:#abb2bf; font-size: 12px; text-decoration: underline" href="/movies/search") Advanced
+    select#selection(style="height: 40px; width: 15px; background-color: #61afef; border: none; outline: none")
+      option(value="Title") Title
+      option(value="Genre") Genre
+      option(value="Actor") Actor
+      option(value="Writer") Writer
+      option(value="Director") Director
+    input#searchBar(class="searchbar-left-button" style="margin-right: 15px; width: 40%;" type="text" placeholder="Search...")
+    button(class="button" style="background-color: #e06c75;" onclick = "window.location.href='/users/signup'") Sign Up
+    button(class="button" style="background-color: #98c379;" onclick = "window.location.href='/users/signin'") Sign In
+    button(class="button" style="background-color: #e06c75;" onclick = "window.location.href='/users/profile'") Profile
+    button(class="button" style="background-color: #98c379;" onclick = "window.location.href='/users/signin'") Logout
+  script
+    include ../../public/scripts/search.js
