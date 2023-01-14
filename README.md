@@ -1,9 +1,10 @@
+#The largest heading
 A movie database web application. 
 
 The server code is built with Node.js, and the database is handled using MongoDB and mongoose. 
 
 RESTful design was used in how the server handles all routing.
-
+#The largest heading
 Running instructions:
 
   - Set up the database:
