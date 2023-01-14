@@ -1,5 +1,5 @@
-TEST
-====
+A movie database web application
+================================
 
 The server code is built with Node.js, and the database is handled using MongoDB and mongoose. 
 
@@ -7,6 +7,7 @@ The server code is built with Node.js, and the database is handled using MongoDB
 
 
 Running instructions:
+=====================
 
   - Set up the database:
     1. Open the terminal and navigate to the directory containing the source code.
