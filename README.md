@@ -33,4 +33,5 @@ Running instructions:
     1. In the first terminal from the 'Set up the database' step, enter the following command:
             node ProjectServer.js
        This runs the server. Open a web browser, and enter the URL 'localhost:3000'
+       Navigate to Sign Up and create a username and password. Your account will be made, and you can navigate the website.
   - For more information, take a look at the included file titled 'Project Report' in the 'info' directory.
