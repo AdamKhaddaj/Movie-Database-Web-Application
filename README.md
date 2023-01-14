@@ -1,4 +1,5 @@
-<font size="1"> A movie database web application. </font>
+A movie database web application
+________________________________
 
 The server code is built with Node.js, and the database is handled using MongoDB and mongoose. 
 
