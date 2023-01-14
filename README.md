@@ -3,8 +3,17 @@ A movie database web application
 
 The server code is built with Node.js, and the database is handled using MongoDB and mongoose. 
 
-<font size="1"> RESTful design was used in how the server handles all routing. </font>
+RESTful design was implemented effectively in how the server handles all routing and errors.
 
+Functionalities:
+================
+Can create user account, which can curate a watchlist, follow directors, add users, etc.
+
+Can view and search movies by genres, actors, can search similar movies based off genres and shared actors.
+
+Can view other users profiles including their watchlists and favorite actors, directors, etc.
+
+Functionality to be implemented: adding new movies to the database, notifications for following users
 
 Running instructions:
 =====================
