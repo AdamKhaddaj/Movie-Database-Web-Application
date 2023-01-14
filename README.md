@@ -1,4 +1,4 @@
-A movie database web application
+#TEST
 ________________________________
 
 The server code is built with Node.js, and the database is handled using MongoDB and mongoose. 
